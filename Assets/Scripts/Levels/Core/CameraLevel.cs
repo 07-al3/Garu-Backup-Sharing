@@ -6,7 +6,7 @@ public class CameraLevel : MonoBehaviour
     [SerializeField] private Vector3 offset;
 
     private float lookAhead;
-    private float cameraSpeed = 2.5f;
+    private float cameraSpeed = 1f;
 
     private void Update()
     {

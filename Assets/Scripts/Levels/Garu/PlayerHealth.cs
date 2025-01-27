@@ -43,6 +43,11 @@ public class PlayerHealth : MonoBehaviour
             currentHealth.fillAmount = Mathf.Clamp(currentHealth.fillAmount + (float)other.GetComponent<Variables>().declarations.Get("Value"), 0, 1f);
             other.gameObject.SetActive(false);
         }
+        if(other.tag.Equals("Shield"))
+        {
+            currentShield.fillAmount = Mathf.Clamp(currentShield.fillAmount + (float)other.GetComponent<Variables>().declarations.Get("Value"), 0, 1f);
+            other.gameObject.SetActive(false);
+        }
     }
 
     private void takeDamage(float damage)
