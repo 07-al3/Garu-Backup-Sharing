@@ -124,7 +124,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: rock_cristall_attack
     originalName: 
-    pivot: {x: 0.50684935, y: -0.010752688}
+    pivot: {x: 0.5090909, y: -0.010752688}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -132,9 +132,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 438
+      width: 440
       height: 93
-    spriteID: f9b0c234678028b4aba1dbd5983572d1
+    spriteID: 7ab366ec78ef2d74fa870efff217841c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,7 +142,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -24, y: 3}
+    uvTransform: {x: -22, y: 3}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -160,7 +160,7 @@ ScriptedImporter:
         y: 0
         width: 500
         height: 100
-      spriteId: f9b0c234678028b4aba1dbd5983572d1
+      spriteId: 7ab366ec78ef2d74fa870efff217841c
     linkedCells: []
     parentIndex: -1
   platformSettings:
