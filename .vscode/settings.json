@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Garu's Adventures, The Last Hope.sln"
+    "dotnet.defaultSolution": "backup-gioco.sln"
 }
