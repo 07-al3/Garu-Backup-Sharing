@@ -124,51 +124,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5802728581691828430, guid: c3136495a4eea3949bb95bff74e101c9, type: 3}
   m_PrefabInstance: {fileID: 8043170650335664450}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &249972706
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 249972707}
-  - component: {fileID: 249972708}
-  m_Layer: 0
-  m_Name: StartingPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &249972707
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249972706}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.026886672, y: 2.43, z: 0.006164026}
-  m_LocalScale: {x: 0.45554417, y: 5.5865264, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 424518055}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &249972708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249972706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2038c995c5b4424887a63682c20e5b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1394252594}
 --- !u!1 &301755455
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,11 +155,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &424518055 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 952018427675583240, guid: 7ea85f2e355c4cc48b9f8d739cde8d44, type: 3}
-  m_PrefabInstance: {fileID: 6282037418156585570}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &495619210 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8194099265801278935, guid: c3136495a4eea3949bb95bff74e101c9, type: 3}
@@ -1653,6 +1603,10 @@ PrefabInstance:
       propertyPath: playerHealthShield
       value: 
       objectReference: {fileID: 1135573375}
+    - target: {fileID: 2887170952591560414, guid: 7ea85f2e355c4cc48b9f8d739cde8d44, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1394252594}
     - target: {fileID: 3561755936052791408, guid: 7ea85f2e355c4cc48b9f8d739cde8d44, type: 3}
       propertyPath: player
       value: 
@@ -1751,10 +1705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 952018427675583240, guid: 7ea85f2e355c4cc48b9f8d739cde8d44, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 249972707}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ea85f2e355c4cc48b9f8d739cde8d44, type: 3}
 --- !u!1001 &6429561362878274111
