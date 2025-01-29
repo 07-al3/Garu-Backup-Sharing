@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class StartButtonsActionsManager : MonoBehaviour
 {
     [SerializeField] private GameObject volumeScreen;
+    [SerializeField] private GameObject creditsButton;
+    [SerializeField] private GameObject main;
 
     public void startGame()
     {
@@ -22,5 +24,11 @@ public class StartButtonsActionsManager : MonoBehaviour
     public void volume()
     {
         volumeScreen.SetActive(!volumeScreen.activeInHierarchy);
+    }
+
+    public void credits()
+    {
+        creditsButton.SetActive(!creditsButton.activeInHierarchy);
+        main.SetActive(!main.activeInHierarchy);
     }
 }
