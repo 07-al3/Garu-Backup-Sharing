@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class BarrelBehaviour : MonoBehaviour
 {
@@ -52,11 +53,6 @@ public class BarrelBehaviour : MonoBehaviour
         return ray;
     }
 
-    private void explode()
-    {
-        anim.SetTrigger("explode");
-    }
-
     private void patrol()
     {
         if(Mathf.Abs(transform.position.x - rightEdge.position.x) < 0.01)
@@ -74,8 +70,23 @@ public class BarrelBehaviour : MonoBehaviour
     private void checkForExploding(Collider2D coll)
     {
         if(Mathf.Abs(coll.gameObject.transform.position.x - transform.position.x) < distanceOfExplosion)
-            explode();
+            anim.SetTrigger("explode");
         else 
+        {
             transform.Translate(speed * Time.deltaTime * (coll.gameObject.transform.position - transform.position).normalized);
+            transform.localScale = coll.transform.position.x > transform.position.x ? new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y) : new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        }
+    }
+
+    public void increaseRadius()
+    {
+        circleColl.radius = 0.3f;
+        StartCoroutine(waitAndturnOff());
+    }
+
+    private IEnumerator waitAndturnOff()
+    {
+        yield return new WaitForSeconds(2);
+        gameObject.SetActive(false);
     }
 }

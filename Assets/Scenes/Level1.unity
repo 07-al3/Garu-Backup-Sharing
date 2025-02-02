@@ -180,7 +180,7 @@ Transform:
   m_GameObject: {fileID: 475885825}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.818, y: 1.22, z: 0}
+  m_LocalPosition: {x: 3.818, y: 1.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -399,7 +399,7 @@ Transform:
   m_GameObject: {fileID: 608476830}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.334, y: 1.213, z: 0}
+  m_LocalPosition: {x: 3.334, y: 1.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -596,6 +596,10 @@ PrefabInstance:
     - target: {fileID: 5136269658626593503, guid: 6e302b38295326c488d542191b8b9d4e, type: 3}
       propertyPath: m_Name
       value: BackGroundMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136269658626593503, guid: 6e302b38295326c488d542191b8b9d4e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9157307187011146103, guid: 6e302b38295326c488d542191b8b9d4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -849,7 +853,7 @@ Transform:
   m_GameObject: {fileID: 1151861614}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.412, y: 1.212, z: 0}
+  m_LocalPosition: {x: 4.412, y: 1.17, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2189,7 +2193,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.1, y: 0.11}
+  m_Size: {x: 0.12, y: 0.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2232,9 +2236,9 @@ MonoBehaviour:
   rightEdge: {fileID: 1151861615}
   leftEdge: {fileID: 608476831}
   initialPos: {fileID: 475885826}
-  distanceOfSearch: 0.7
-  distanceOfExplosion: 0.3
-  speed: 0.1
+  distanceOfSearch: 0.8
+  distanceOfExplosion: 0.2
+  speed: 0.2
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -2268,12 +2272,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.01}
-  m_Radius: 0.062494278
+  m_Radius: 0.07
 --- !u!50 &7870354972873132511
 Rigidbody2D:
   serializedVersion: 5
@@ -2289,7 +2293,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
