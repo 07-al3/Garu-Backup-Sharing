@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class RockAttack : MonoBehaviour
 {
@@ -20,18 +21,17 @@ public class RockAttack : MonoBehaviour
         if(attackCoolDown < lastAttack)
         {
             lastAttack = 0;
-            attack();
+            StartCoroutine(attack());
         }
         else
-        {
             lastAttack += Time.deltaTime;
-            circleColl.radius = defCollider;
-        }
     }
 
-    private void attack()
+    private IEnumerator attack()
     {
+        circleColl.radius = 0.35f;
         anim.SetTrigger("attack");
-        circleColl.radius = 0.5f;
+        yield return new WaitForSeconds(1);
+        circleColl.radius = defCollider;
     }
 }
