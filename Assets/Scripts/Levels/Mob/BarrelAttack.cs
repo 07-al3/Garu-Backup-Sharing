@@ -1,28 +1,21 @@
 using UnityEngine;
 using System.Collections;
 
-public class BarrelBehaviour : MonoBehaviour
+public class BarrelAttack : MonoBehaviour
 {
     private Animator anim;
-    private bool movingRight;
     private CircleCollider2D circleColl;
+    private float speed;
 
-    [Header("Patrol Parameters")]
-    [SerializeField] private Transform rightEdge;
-    [SerializeField] private Transform leftEdge;
-    [SerializeField] private Transform initialPos;
-
-    [Header("Movement and Attack Parameters")]
     [SerializeField] private float distanceOfSearch;
     [SerializeField] private float distanceOfExplosion;
-    [SerializeField] private float speed;
     [SerializeField] private LayerMask playerLayer;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         circleColl = GetComponent<CircleCollider2D>();
-        transform.position = initialPos.position;
+        speed = GetComponent<MobPatrol>().speed;
     }
 
     private void Update()
@@ -33,12 +26,15 @@ public class BarrelBehaviour : MonoBehaviour
         Collider2D rightColl = rightRay.collider;
         Collider2D leftColl = leftRay.collider;
 
+        if(rightColl != null || leftColl != null)
+            GetComponent<BehavioursSetter>().setActive(false);
+        else
+            GetComponent<BehavioursSetter>().setActive(true);
+
         if(rightColl != null)
             checkForExploding(rightColl);
         else if(leftColl != null)
             checkForExploding(leftColl);
-        else
-            patrol();
     }
 
     private RaycastHit2D searchPlayerOnRight()
@@ -51,20 +47,6 @@ public class BarrelBehaviour : MonoBehaviour
     {
         RaycastHit2D ray = Physics2D.BoxCast(circleColl.bounds.center, circleColl.bounds.size, 0, new Vector2(-Mathf.Abs(transform.localScale.x), 0), distanceOfSearch, playerLayer);
         return ray;
-    }
-
-    private void patrol()
-    {
-        if(Mathf.Abs(transform.position.x - rightEdge.position.x) < 0.01)
-            movingRight = false;
-        else if(Mathf.Abs(transform.position.x - leftEdge.position.x) < 0.01)
-           movingRight = true;
-
-        transform.localScale = movingRight ? new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y) : new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y);
-
-        Vector3 target = movingRight ? rightEdge.position : leftEdge.position;
-        Vector3 direction = (target - transform.position).normalized;
-        transform.Translate(speed * Time.deltaTime * direction);
     }
 
     private void checkForExploding(Collider2D coll)
@@ -86,7 +68,7 @@ public class BarrelBehaviour : MonoBehaviour
 
     private IEnumerator waitAndturnOff()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
         gameObject.SetActive(false);
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - CheckPoint
   - Health
   - Shield
+  - Projectile
   layers:
   - Default
   - TransparentFX
