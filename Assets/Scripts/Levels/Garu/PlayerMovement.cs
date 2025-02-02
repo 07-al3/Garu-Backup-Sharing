@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -106,6 +107,8 @@ public class PlayerMovement : MonoBehaviour
             Time.timeScale = 0.25f; 
         if(Input.GetKeyDown(KeyCode.E))
             Time.timeScale = 1; 
+        if(Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         if(Input.GetKeyDown(KeyCode.T)) 
         {

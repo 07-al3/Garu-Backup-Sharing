@@ -2189,7 +2189,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.1, y: 0.11}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2229,15 +2229,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da4302871b3b02e469ce87133a9d547f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightEdge: {fileID: 1151861615}
+  leftEdge: {fileID: 608476831}
+  initialPos: {fileID: 475885826}
+  distanceOfSearch: 0.7
+  distanceOfExplosion: 0.3
+  speed: 0.1
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  rightEdge: {fileID: 1151861615}
-  leftEdge: {fileID: 608476831}
-  distance: 1
-  speed: 0.1
-  initialPos: {fileID: 475885826}
-  circleColl: {fileID: 7870354972873132510}
 --- !u!58 &7870354972873132510
 CircleCollider2D:
   m_ObjectHideFlags: 0

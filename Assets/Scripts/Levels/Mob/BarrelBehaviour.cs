@@ -4,65 +4,78 @@ public class BarrelBehaviour : MonoBehaviour
 {
     private Animator anim;
     private bool movingRight;
+    private CircleCollider2D circleColl;
 
-    [SerializeField] private LayerMask playerLayer;
+    [Header("Patrol Parameters")]
     [SerializeField] private Transform rightEdge;
     [SerializeField] private Transform leftEdge;
-    [SerializeField] private float distance;
-    [SerializeField] private float speed;
-    [SerializeField] private float distanceOfExplosion;
     [SerializeField] private Transform initialPos;
-    [SerializeField] private CircleCollider2D circleColl;
+
+    [Header("Movement and Attack Parameters")]
+    [SerializeField] private float distanceOfSearch;
+    [SerializeField] private float distanceOfExplosion;
+    [SerializeField] private float speed;
+    [SerializeField] private LayerMask playerLayer;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        circleColl = GetComponent<CircleCollider2D>();
         transform.position = initialPos.position;
     }
 
     private void Update()
     {
-        RaycastHit2D ray = searchPlayer();
-        Collider2D coll = ray.collider;
+        RaycastHit2D rightRay = searchPlayerOnRight();
+        RaycastHit2D leftRay = searchPlayerOnLeft();
 
-        if(coll != null)
-        {
-            if(coll.gameObject.transform.position.x - transform.position.x < distanceOfExplosion)
-                anim.SetTrigger("explode");
+        Collider2D rightColl = rightRay.collider;
+        Collider2D leftColl = leftRay.collider;
 
-
-            // raggio esplosione e danni + deattivazione da funzione a fine animazione
-
-
-            else
-                transform.Translate((coll.gameObject.transform.position - transform.position).normalized * speed * Time.deltaTime);
-        }
+        if(rightColl != null)
+            checkForExploding(rightColl);
+        else if(leftColl != null)
+            checkForExploding(leftColl);
         else
-        {
-            if(Mathf.Abs(transform.position.x - rightEdge.position.x) < 0.01)
-                movingRight = false;
-            else if(Mathf.Abs(transform.position.x - leftEdge.position.x) < 0.01)
-                movingRight = true;
-
-            transform.localScale = movingRight ? new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y) : new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y);
-
-            Vector3 target = movingRight ? rightEdge.position : leftEdge.position;
-            Vector3 direction = (target - transform.position).normalized;
-            transform.Translate(direction * speed * Time.deltaTime);
-        }
+            patrol();
     }
 
-    private RaycastHit2D searchPlayer()
+    private RaycastHit2D searchPlayerOnRight()
     {
-        RaycastHit2D ray = Physics2D.BoxCast(circleColl.bounds.center, circleColl.bounds.size, 0, new Vector2(transform.localScale.x, 0), distance, playerLayer);
+        RaycastHit2D ray = Physics2D.BoxCast(circleColl.bounds.center, circleColl.bounds.size, 0, new Vector2(Mathf.Abs(transform.localScale.x), 0), distanceOfSearch, playerLayer);
         return ray;
     }
 
-    private void OnDrawGizmos()
+    private RaycastHit2D searchPlayerOnLeft()
     {
-        Gizmos.color = Color.red;
-        Vector2 direction = new Vector2(-Mathf.Sign(transform.localScale.x), 0);
-        Vector3 finalCenter = circleColl.bounds.center + (Vector3)(direction * distance);
-        Gizmos.DrawWireCube(finalCenter, circleColl.bounds.size);
+        RaycastHit2D ray = Physics2D.BoxCast(circleColl.bounds.center, circleColl.bounds.size, 0, new Vector2(-Mathf.Abs(transform.localScale.x), 0), distanceOfSearch, playerLayer);
+        return ray;
+    }
+
+    private void explode()
+    {
+        anim.SetTrigger("explode");
+    }
+
+    private void patrol()
+    {
+        if(Mathf.Abs(transform.position.x - rightEdge.position.x) < 0.01)
+            movingRight = false;
+        else if(Mathf.Abs(transform.position.x - leftEdge.position.x) < 0.01)
+           movingRight = true;
+
+        transform.localScale = movingRight ? new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y) : new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+
+        Vector3 target = movingRight ? rightEdge.position : leftEdge.position;
+        Vector3 direction = (target - transform.position).normalized;
+        transform.Translate(speed * Time.deltaTime * direction);
+    }
+
+    private void checkForExploding(Collider2D coll)
+    {
+        if(Mathf.Abs(coll.gameObject.transform.position.x - transform.position.x) < distanceOfExplosion)
+            explode();
+        else 
+            transform.Translate(speed * Time.deltaTime * (coll.gameObject.transform.position - transform.position).normalized);
     }
 }
