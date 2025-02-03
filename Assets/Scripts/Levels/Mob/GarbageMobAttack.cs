@@ -20,6 +20,6 @@ public class GarbageMobAttack : MonoBehaviour
 
     private void checkScale(Collider2D other)
     {
-        transform.localScale = other.transform.position.x > transform.position.x ? new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y) : transform.localScale;
+        transform.localScale = other.transform.position.x > transform.position.x ? new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y) : new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
     }
 }

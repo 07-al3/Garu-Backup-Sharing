@@ -3,6 +3,7 @@ using UnityEngine;
 public class GarbageMobAlert : MonoBehaviour
 {
     private BoxCollider2D boxColl;
+    [SerializeField] private GameObject otherAl;
 
     private void Awake()
     {
@@ -15,6 +16,7 @@ public class GarbageMobAlert : MonoBehaviour
         {
             GetComponentInParent<Animator>().SetTrigger("discover");
             gameObject.SetActive(false);
+            otherAl.gameObject.SetActive(false);
         }
     }
 }

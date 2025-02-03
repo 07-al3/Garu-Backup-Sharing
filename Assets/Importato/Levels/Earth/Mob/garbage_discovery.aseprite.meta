@@ -209,7 +209,7 @@ ScriptedImporter:
   spriteSheetImportData:
   - name: garbage_discovery_0
     originalName: 
-    pivot: {x: 0.5000001, y: 0.37096763}
+    pivot: {x: 0.5000001, y: 0.8345282}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -230,7 +230,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: garbage_discovery_1
     originalName: 
-    pivot: {x: 0.49667573, y: 0.3853047}
+    pivot: {x: 0.48670262, y: 0.82497}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -251,7 +251,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: garbage_discovery_2
     originalName: 
-    pivot: {x: 0.5038233, y: 0.37524357}
+    pivot: {x: 0.51529276, y: 0.8259759}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -272,7 +272,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: garbage_discovery_3
     originalName: 
-    pivot: {x: 0.49335116, y: 0.33273584}
+    pivot: {x: 0.5066495, y: 0.81541204}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
