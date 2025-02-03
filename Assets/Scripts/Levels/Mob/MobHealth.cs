@@ -8,7 +8,15 @@ public class MobHealth : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag.Equals("Projectile"))
+        {
             health -= (float)other.GetComponent<Variables>().declarations.Get("DamageValue");
+            try
+            {
+                GetComponent<Animator>().SetTrigger("hurt");
+            }
+            catch(System.Exception)
+            {}
+        }
         if(health < 0.1f)
             gameObject.SetActive(false);
     }
