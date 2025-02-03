@@ -4,8 +4,8 @@ using System.Collections;
 public class RockAttack : MonoBehaviour
 {
     [SerializeField] private float attackCoolDown;
-    [SerializeField] private CircleCollider2D circleColl;
 
+    private CircleCollider2D circleColl;
     private Animator anim;
     private float defCollider;
     private float lastAttack;
@@ -13,6 +13,7 @@ public class RockAttack : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        circleColl = GetComponent<CircleCollider2D>();
         defCollider = circleColl.radius;
     }
 
