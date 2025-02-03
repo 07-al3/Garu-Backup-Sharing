@@ -6,6 +6,8 @@ public class AnswerButtonsActions : MonoBehaviour
     [SerializeField] private Transform startPosition;
     [SerializeField] private GameObject door;
     [SerializeField] private GameObject questionCanvas;
+    [SerializeField] private Sprite doorOpen;
+    [SerializeField] private Sprite leverDown;
 
     public void wrong()
     {

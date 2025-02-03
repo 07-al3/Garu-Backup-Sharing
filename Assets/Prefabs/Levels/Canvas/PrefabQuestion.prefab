@@ -492,6 +492,8 @@ MonoBehaviour:
   startPosition: {fileID: 0}
   door: {fileID: 0}
   questionCanvas: {fileID: 4264247745042924298}
+  doorOpen: {fileID: -5627038883029704425, guid: 71118302254d04f4fa575b7b16b712b4, type: 3}
+  leverDown: {fileID: -2960017947532430019, guid: 607ce1dd30a34164488aba9d8dafc899, type: 3}
 --- !u!1 &4663937934052954267
 GameObject:
   m_ObjectHideFlags: 0
