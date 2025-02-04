@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class AnswerButtonsActions : MonoBehaviour
 {
+    [Header("Sprite And Lever")]
+    [SerializeField] private Sprite doorOpen;
+    [SerializeField] private GameObject lever;
+
+    [Header("Player and Positions")]
     [SerializeField] private GameObject player;
     [SerializeField] private Transform startPosition;
+
+    [Header("Door e Q&A")]
     [SerializeField] private GameObject door;
     [SerializeField] private GameObject questionCanvas;
-    [SerializeField] private Sprite doorOpen;
-    [SerializeField] private Sprite leverDown;
-
+    
     public void wrong()
     {
         PlayerHealth healthRef = player.GetComponent<PlayerHealth>();
@@ -24,6 +29,10 @@ public class AnswerButtonsActions : MonoBehaviour
         questionCanvas.SetActive(false);
         Time.timeScale = 1;
         player.GetComponent<BehavioursSetter>().setActive(true);
-        door.SetActive(false);
+
+        door.GetComponent<SpriteRenderer>().sprite = doorOpen;
+        door.GetComponent<CapsuleCollider2D>().enabled = false;
+
+        lever.SetActive(false);
     }
 }
