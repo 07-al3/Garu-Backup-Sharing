@@ -37,6 +37,6 @@ public class RespawnManager : MonoBehaviour
 
         deadCanvas.SetActive(false);
 
-        player.GetComponent<Animator>().Play("standing");
+        player.GetComponent<Animator>().Play("Standing");
     }
 }
