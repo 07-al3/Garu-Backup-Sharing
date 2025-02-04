@@ -25,7 +25,7 @@ public class HubMovement : MonoBehaviour
         if(movement.magnitude > 1)
             movement.Normalize();
           
-        animator.SetBool("walk", horizontalInput != 0 || verticalInput != 0);
+        animator.SetBool("Walk", horizontalInput != 0 || verticalInput != 0);
         transform.Translate(movement);
     }
 }

@@ -40,13 +40,13 @@ public class PlayerMovement : MonoBehaviour
 
         if(onWall && body.linearVelocity.y != 0)
         {
-            animator.SetBool("clinging", true);
+            animator.SetBool("Clinging", true);
             resetVelocity();
             setGravityScale(0);
         }
         else if(!onWall)
         {
-            animator.SetBool("clinging", false);
+            animator.SetBool("Clinging", false);
             setGravityScale(1);
         }
 
@@ -54,11 +54,11 @@ public class PlayerMovement : MonoBehaviour
         if(horizontalInput != 0)
         {
             transform.localScale = new Vector3(Mathf.Sign(horizontalInput) * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); 
-            animator.SetBool("walking", true);
+            animator.SetBool("Walking", true);
             body.linearVelocity = new Vector2(horizontalInput * speed, body.linearVelocity.y);
         }
         else
-            animator.SetBool("walking", false);
+            animator.SetBool("Walking", false);
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -66,26 +66,26 @@ public class PlayerMovement : MonoBehaviour
                 jump(horizontalInput * speed, jumpPower);
             else if(onWall)
             {
-                animator.SetBool("clinging", false);
+                animator.SetBool("Clinging", false);
 
                 transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
                 body.linearVelocity = new Vector2(Mathf.Sign(transform.localScale.x) * speed, jumpPower);
 
                 setGravityScale(1);
-                animator.SetTrigger("jump");
+                animator.SetTrigger("Jump");
             }
         }
 
         if(body.linearVelocity.y < 0 && !isFalling)
         {
-            animator.SetTrigger("land");
+            animator.SetTrigger("Land");
             isFalling = true;
         }
 
         if(isGrounded)
         {
             isFalling = false;
-            animator.ResetTrigger("land");
+            animator.ResetTrigger("Land");
         }
     }
 
@@ -117,19 +117,19 @@ public class PlayerMovement : MonoBehaviour
                 resetVelocity();
                 body.AddForce(new Vector2(50 * -Mathf.Sign(transform.localScale.x), 25 * transform.localScale.y), ForceMode2D.Force); 
             }
-            animator.SetTrigger("hurt");
+            animator.SetTrigger("Hurt");
         }
         if(Input.GetKeyDown(KeyCode.M))
         {
             resetVelocity();
-            animator.SetTrigger("die");
+            animator.SetTrigger("Die");
             
         }
     }
 
     private void jump(float x, float y)
     {
-        animator.SetTrigger("jump");
+        animator.SetTrigger("Jump");
         body.linearVelocity = new Vector2(body.linearVelocity.x, 0); 
         body.AddForce(new Vector2(x, y), ForceMode2D.Impulse);
     }

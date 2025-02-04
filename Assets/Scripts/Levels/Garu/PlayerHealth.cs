@@ -36,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
         if(other.tag.Equals("CheckPoint"))
         {
             lastCheckpoint = other.transform;
-            other.GetComponent<Animator>().SetTrigger("activate");
+            other.GetComponent<Animator>().SetTrigger("Activate");
         }
         if(other.tag.Equals("Health"))
         {
@@ -52,7 +52,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void takeDamage(float damage)
     {
-        anim.SetTrigger("hurt");
+        anim.SetTrigger("Hurt");
 
         if(currentShield.fillAmount < damage)
         {
@@ -80,7 +80,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void die()
     {
-        anim.SetTrigger("die");
+        anim.SetTrigger("Die");
         behaviourReference.setActive(false);
         body.gravityScale = 0;
         body.linearVelocity = Vector2.zero;

@@ -33,7 +33,7 @@ public class GaruProjectile : MonoBehaviour
 
     private void fireProjectile()
     {
-        animator.SetTrigger("fire"); 
+        animator.SetTrigger("Fire"); 
     }
 
     private void deactivateProjectile()
@@ -45,7 +45,7 @@ public class GaruProjectile : MonoBehaviour
     {
         hit = true;
         body.linearVelocity = Vector2.zero;
-        animator.SetTrigger("hit");
+        animator.SetTrigger("Hit");
     }
 
     public void setDirection(float d)

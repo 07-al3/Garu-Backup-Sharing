@@ -20,7 +20,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0) && lastAttack > attackCooldown && canAttack())
         {
-            animator.SetTrigger("shoot");
+            animator.SetTrigger("Shoot");
             lastAttack = 0;
         }
         lastAttack += Time.deltaTime;
