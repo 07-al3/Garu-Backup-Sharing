@@ -82,9 +82,14 @@ public class PlayerHealth : MonoBehaviour
     {
         anim.SetTrigger("Die");
         behaviourReference.setActive(false);
+
         body.gravityScale = 0;
         body.linearVelocity = Vector2.zero;
+
         playerPosition.position = new Vector2(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y + 0.02f);
+
+        currentHealth.fillAmount = 0;
+        currentShield.fillAmount = 0;
 
         deadCanvas.SetActive(true);
     }
