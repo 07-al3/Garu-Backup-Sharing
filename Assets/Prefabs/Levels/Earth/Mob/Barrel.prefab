@@ -225,7 +225,7 @@ MonoBehaviour:
   rightEdge: {fileID: 0}
   leftEdge: {fileID: 0}
   initialPos: {fileID: 0}
-  speed: 0.2
+  speed: 0.4
 --- !u!114 &6787076485579982746
 MonoBehaviour:
   m_ObjectHideFlags: 0
