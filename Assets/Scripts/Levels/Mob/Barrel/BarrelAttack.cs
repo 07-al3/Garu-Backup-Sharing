@@ -68,7 +68,7 @@ public class BarrelAttack : MonoBehaviour
 
     private IEnumerator waitAndturnOff()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
     }
 }
