@@ -29,7 +29,7 @@ public class RespawnManager : MonoBehaviour
         playerBody.gravityScale = 1;
 
         playerHealth.fillAmount = 1;
-        playerShield.fillAmount = 1;
+        playerShield.fillAmount = 0;
 
         playerBehaviours.setActive(true);
 

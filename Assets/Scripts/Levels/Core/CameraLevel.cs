@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class CameraLevel : MonoBehaviour
 {
-    [SerializeField] private Transform playerPosition;
     [SerializeField] private Vector3 offset;
 
     private float lookAhead;
     private float cameraSpeed = 0.8f;
+    private Transform playerPosition;
+
+    private void Awake()
+    {
+        playerPosition = GameObject.Find("Player").transform;
+    }
 
     private void Update()
     {
