@@ -9,6 +9,22 @@ public class NewChunkLoader : MonoBehaviour
     [SerializeField] private GameObject[] decorations;
     [SerializeField] private GameObject[] checkpoints;
 
+    private void Awake()
+    {
+        foreach(GameObject g in room)
+             g.SetActive(false);
+        foreach(GameObject g in mob)
+            g.SetActive(false);
+        foreach(GameObject g in collectibles)
+            g.SetActive(false);
+        foreach(GameObject g in angles)
+            g.SetActive(false);
+        foreach(GameObject g in decorations)
+            g.SetActive(false);
+        foreach(GameObject g in checkpoints)
+            g.SetActive(false);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag.Equals("Player"))

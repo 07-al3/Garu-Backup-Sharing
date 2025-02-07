@@ -11,7 +11,13 @@ public class OldChunkDisabler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag.Equals("Player"))
+        GameObject lastCheck = other.GetComponent<PlayerHealth>().lastCheckpoint.gameObject;
+        bool trovato = false;
+
+        foreach(GameObject g in checkpoints)
+            trovato = g == lastCheck;
+
+        if(other.tag.Equals("Player") && trovato)
         {
             foreach(GameObject g in room)
                 g.SetActive(false);
