@@ -11,36 +11,28 @@ public class NewChunkLoader : MonoBehaviour
 
     private void Awake()
     {
-        foreach(GameObject g in room)
-             g.SetActive(false);
-        foreach(GameObject g in mob)
-            g.SetActive(false);
-        foreach(GameObject g in collectibles)
-            g.SetActive(false);
-        foreach(GameObject g in angles)
-            g.SetActive(false);
-        foreach(GameObject g in decorations)
-            g.SetActive(false);
-        foreach(GameObject g in checkpoints)
-            g.SetActive(false);
+        set(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag.Equals("Player"))
-        {
-            foreach(GameObject g in room)
-                g.SetActive(true);
-            foreach(GameObject g in mob)
-                g.SetActive(true);
-            foreach(GameObject g in collectibles)
-                g.SetActive(true);
-            foreach(GameObject g in angles)
-                g.SetActive(true);
-            foreach(GameObject g in decorations)
-                g.SetActive(true);
-            foreach(GameObject g in checkpoints)
-                g.SetActive(true);
-        }
+            set(true);
+    }
+
+    private void set(bool status)
+    {
+        foreach(GameObject g in room)
+            g.SetActive(status);
+        foreach(GameObject g in mob)
+            g.SetActive(status);
+        foreach(GameObject g in collectibles)
+            g.SetActive(status);
+        foreach(GameObject g in angles)
+            g.SetActive(status);
+        foreach(GameObject g in decorations)
+            g.SetActive(status);
+        foreach(GameObject g in checkpoints)
+            g.SetActive(status);
     }
 }
