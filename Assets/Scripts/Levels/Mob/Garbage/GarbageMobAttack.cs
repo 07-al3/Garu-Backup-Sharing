@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class GarbageMobAttack : MonoBehaviour
 {
+    [SerializeField] private float attackCooldown;
+
     private Animator anim;
+    private float lastAttack;
 
     private void Awake()
     {
@@ -11,10 +14,16 @@ public class GarbageMobAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag.Equals("Player"))
+        if (other.tag.Equals("Player") && lastAttack > attackCooldown)
         {
+            lastAttack = 0;
             checkScale(other);
             anim.SetTrigger("Attack");
+        }
+        else
+        {
+            lastAttack += Time.deltaTime;
+            //Physics.IgnoreCollision(other.GetComponent<Collider>(), GetComponent<BoxCollider2D>().GetComponent<Collider>());
         }
     }
 
