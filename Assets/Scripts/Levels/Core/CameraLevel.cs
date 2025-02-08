@@ -3,19 +3,14 @@ using UnityEngine;
 public class CameraLevel : MonoBehaviour
 {
     [SerializeField] private Vector3 offset;
+    [SerializeField] private Transform player;
 
     private float lookAhead;
-    private float cameraSpeed = 0.8f;
-    private Transform playerPosition;
-
-    private void Awake()
-    {
-        playerPosition = GameObject.Find("Player").transform;
-    }
+    private const float cameraSpeed = 0.8f;
 
     private void Update()
     {
-        transform.position = new Vector3(playerPosition.position.x + lookAhead, playerPosition.position.y + offset.y, playerPosition.position.z - offset.z);
-        lookAhead = Mathf.Lerp(lookAhead, offset.x * playerPosition.localScale.x, Time.deltaTime * cameraSpeed);
+        transform.position = new Vector3(player.position.x + lookAhead, player.position.y + offset.y, player.position.z - offset.z);
+        lookAhead = Mathf.Lerp(lookAhead, offset.x * player.localScale.x, Time.deltaTime * cameraSpeed);
     }
 }
