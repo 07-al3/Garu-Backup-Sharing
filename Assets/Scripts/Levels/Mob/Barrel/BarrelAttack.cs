@@ -6,6 +6,7 @@ public class BarrelAttack : MonoBehaviour
     private Animator anim;
     private CircleCollider2D circleColl;
     private float speed;
+    private bool exploding;
 
     [SerializeField] private float distanceOfSearch;
     [SerializeField] private float distanceOfExplosion;
@@ -16,6 +17,7 @@ public class BarrelAttack : MonoBehaviour
         anim = GetComponent<Animator>();
         circleColl = GetComponent<CircleCollider2D>();
         speed = GetComponent<MobPatrol>().speed;
+        exploding = false;
     }
 
     private void Update()
@@ -26,9 +28,9 @@ public class BarrelAttack : MonoBehaviour
         Collider2D rightColl = rightRay.collider;
         Collider2D leftColl = leftRay.collider;
 
-        if(rightColl != null || leftColl != null)
+        if(rightColl != null || leftColl != null && !exploding)
             GetComponent<BehavioursSetter>().setActive(false);
-        else
+        else if(!exploding)
             GetComponent<BehavioursSetter>().setActive(true);
 
         if(rightColl != null)
@@ -52,8 +54,15 @@ public class BarrelAttack : MonoBehaviour
     private void checkForExploding(Collider2D coll)
     {
         if(Mathf.Abs(coll.gameObject.transform.position.x - transform.position.x) < distanceOfExplosion)
-            anim.SetTrigger("Explode");
-        else 
+        {
+            if(!exploding)
+            {
+                exploding = true;
+                GetComponent<BehavioursSetter>().setActive(false);
+                anim.SetTrigger("Explode");
+            }
+        }
+        else if(!exploding)
         {
             transform.Translate(speed * Time.deltaTime * (coll.gameObject.transform.position - transform.position).normalized);
             transform.localScale = coll.transform.position.x > transform.position.x ? new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y) : new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y);
