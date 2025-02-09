@@ -20,4 +20,9 @@ public class MobHealth : MonoBehaviour
         if(health < 0.1f)
             gameObject.SetActive(false);
     }
+
+    public float getHealth()
+    {
+        return health;
+    }
 }

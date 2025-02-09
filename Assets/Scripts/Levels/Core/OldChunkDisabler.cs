@@ -11,7 +11,7 @@ public class OldChunkDisabler : MonoBehaviour
     [SerializeField] private GameObject[] checkpoints;
     [SerializeField] private float delay;
 
-    bool trovato;
+    private bool trovato;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -24,7 +24,7 @@ public class OldChunkDisabler : MonoBehaviour
         trovato = setTrovato(other);
 
         if(other.tag.Equals("Player") && !trovato)
-            set(false);
+            set();
         else
             StartCoroutine(WaitAndRetry(other));
     }
@@ -48,19 +48,19 @@ public class OldChunkDisabler : MonoBehaviour
         search(other);
     }
 
-    private void set(bool status)
+    private void set()
     {
         foreach(GameObject g in room)
-            g.SetActive(status);
+            g.SetActive(!g.activeInHierarchy);
         foreach(GameObject g in mob)
-            g.SetActive(status);
+            g.SetActive(!g.activeInHierarchy);
         foreach(GameObject g in collectibles)
-            g.SetActive(status);
+            g.SetActive(!g.activeInHierarchy);
         foreach(GameObject g in angles)
-            g.SetActive(status);
+            g.SetActive(!g.activeInHierarchy);
         foreach(GameObject g in decorations)
-            g.SetActive(status);
+            g.SetActive(!g.activeInHierarchy);
         foreach(GameObject g in checkpoints)
-            g.SetActive(status);
+            g.SetActive(!g.activeInHierarchy);
     }
 }
