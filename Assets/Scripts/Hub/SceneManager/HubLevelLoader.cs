@@ -17,11 +17,12 @@ public class HubLevelLoader : MonoBehaviour
                 loadLevel(2);
                 break;
             }
-            /*case "livello2":
+            case "livello2":
             {
-                loadLevel(4);
+                loadLevel(3);
                 break;
             }
+            /*
             case "livello3":
             {
                 loadLevel(5);
