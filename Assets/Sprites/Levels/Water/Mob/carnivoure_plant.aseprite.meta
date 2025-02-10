@@ -209,15 +209,15 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: carnivoure_plant_4
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.47872925, y: 0.50000006}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 316
       y: 5
-      width: 21
+      width: 23
       height: 26
     spriteID: f0201e71c1b26614ab04b15d1a8bf5a8
     spriteBone: []
@@ -283,27 +283,6 @@ ScriptedImporter:
       width: 43
       height: 16
     spriteID: 8e6e4a8992adc1148bb4d11babc0d79f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: carnivoure_plant_9
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 335
-      y: 15
-      width: 4
-      height: 4
-    spriteID: bc37958fa830cab45be1102ed9273812
     spriteBone: []
     spriteOutline: []
     vertices: []
