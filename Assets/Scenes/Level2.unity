@@ -1075,7 +1075,7 @@ Transform:
   m_GameObject: {fileID: 1463359041}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.553, y: 1.257, z: 0}
+  m_LocalPosition: {x: 15.808, y: 27.688, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1435,7 +1435,7 @@ GameObject:
   - component: {fileID: 967786080899649285}
   - component: {fileID: 9103927465080778123}
   - component: {fileID: 8559632889151424783}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LifeSaver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1691,7 +1691,7 @@ GameObject:
   - component: {fileID: 302131330150094825}
   - component: {fileID: 8577249815363351911}
   - component: {fileID: 9193758113702121955}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LifeSaver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1849,8 +1849,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0020371384, y: 0.0041860607}
-  m_Size: {x: 0.3513594, y: 0.12161503}
+  m_Offset: {x: -0.007276595, y: 0.0041860617}
+  m_Size: {x: 0.41256738, y: 0.12161537}
   m_Direction: 1
 --- !u!1 &1262521393143637292
 GameObject:
@@ -1863,7 +1863,7 @@ GameObject:
   - component: {fileID: 2017143433774558197}
   - component: {fileID: 7550202171736476027}
   - component: {fileID: 6942859400967925247}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LifeSaver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2126,7 +2126,7 @@ GameObject:
   - component: {fileID: 2879080021801335845}
   - component: {fileID: 6110660793726721707}
   - component: {fileID: 6652701300086290991}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LifeSaver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2184,8 +2184,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0020371384, y: 0.0041860607}
-  m_Size: {x: 0.3513594, y: 0.12161503}
+  m_Offset: {x: 0.0060293092, y: 0.0041860603}
+  m_Size: {x: 0.3965991, y: 0.12161528}
   m_Direction: 1
 --- !u!70 &3686948671299167280
 CapsuleCollider2D:
@@ -2221,8 +2221,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0020371384, y: 0.0041860607}
-  m_Size: {x: 0.3513594, y: 0.12161503}
+  m_Offset: {x: 0.00469865, y: 0.0041860603}
+  m_Size: {x: 0.39393857, y: 0.12161536}
   m_Direction: 1
 --- !u!70 &3957874805360726291
 CapsuleCollider2D:
@@ -2258,8 +2258,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0020371384, y: 0.0041860607}
-  m_Size: {x: 0.3513594, y: 0.12161503}
+  m_Offset: {x: 0.0020361252, y: 0.0041860607}
+  m_Size: {x: 0.4205498, y: 0.12161542}
   m_Direction: 1
 --- !u!70 &3986996897775374144
 CapsuleCollider2D:
@@ -2295,8 +2295,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0020371384, y: 0.0041860607}
-  m_Size: {x: 0.3513594, y: 0.12161503}
+  m_Offset: {x: -0.00062423904, y: 0.0041860607}
+  m_Size: {x: 0.41522825, y: 0.12161539}
   m_Direction: 1
 --- !u!212 &4019914063269255853
 SpriteRenderer:
@@ -2568,8 +2568,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0020371384, y: 0.0041860607}
-  m_Size: {x: 0.3513594, y: 0.12161503}
+  m_Offset: {x: 0.0020372875, y: 0.0041860607}
+  m_Size: {x: 0.40990484, y: 0.12161536}
   m_Direction: 1
 --- !u!212 &4596734333329124292
 SpriteRenderer:
@@ -2714,6 +2714,10 @@ PrefabInstance:
       propertyPath: 'projectiles.Array.data[9]'
       value: 
       objectReference: {fileID: 495619210}
+    - target: {fileID: 3282045567322006772, guid: eaf76b46e21d7cd4b88ff39f64a11e0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4554159842852535599, guid: eaf76b46e21d7cd4b88ff39f64a11e0f, type: 3}
       propertyPath: deadCanvas
       value: 
@@ -2774,7 +2778,7 @@ GameObject:
   - component: {fileID: 5474168527323969990}
   - component: {fileID: 4089768597513837384}
   - component: {fileID: 3485662788188962764}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LifeSaver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2810,7 +2814,7 @@ GameObject:
   - component: {fileID: 5227840082818032186}
   - component: {fileID: 4302315608117231796}
   - component: {fileID: 3686948671299167280}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LifeSaver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2858,7 +2862,7 @@ GameObject:
   - component: {fileID: 5544775698619828554}
   - component: {fileID: 4596734333329124292}
   - component: {fileID: 3986996897775374144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LifeSaver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2876,7 +2880,7 @@ GameObject:
   - component: {fileID: 5569434009797580569}
   - component: {fileID: 4500075838941590935}
   - component: {fileID: 3957874805360726291}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LifeSaver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3009,7 +3013,7 @@ GameObject:
   - component: {fileID: 4967605704406497315}
   - component: {fileID: 4019914063269255853}
   - component: {fileID: 4564349305687785001}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LifeSaver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3335,8 +3339,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0020371384, y: 0.0041860607}
-  m_Size: {x: 0.3513594, y: 0.12161503}
+  m_Offset: {x: -0.00062312145, y: 0.0041860607}
+  m_Size: {x: 0.39394018, y: 0.12161533}
   m_Direction: 1
 --- !u!95 &6913302249916914824
 Animator:
@@ -3410,8 +3414,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0020371384, y: 0.0041860607}
-  m_Size: {x: 0.3513594, y: 0.12161503}
+  m_Offset: {x: 0.0060292645, y: 0.0041860603}
+  m_Size: {x: 0.40724602, y: 0.12161534}
   m_Direction: 1
 --- !u!1 &7284406106151888961
 GameObject:
@@ -3683,8 +3687,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0020371384, y: 0.0041860607}
-  m_Size: {x: 0.3513594, y: 0.12161503}
+  m_Offset: {x: -0.0046154857, y: 0.004186061}
+  m_Size: {x: 0.40724504, y: 0.12161534}
   m_Direction: 1
 --- !u!212 &8577249815363351911
 SpriteRenderer:
@@ -3807,7 +3811,7 @@ GameObject:
   - component: {fileID: 8421507802472187800}
   - component: {fileID: 569376742566896918}
   - component: {fileID: 1114812607824478610}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LifeSaver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3848,8 +3852,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0020371384, y: 0.0041860607}
-  m_Size: {x: 0.3513594, y: 0.12161503}
+  m_Offset: {x: 0.0033681104, y: 0.0041860603}
+  m_Size: {x: 0.43385744, y: 0.12161549}
   m_Direction: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
