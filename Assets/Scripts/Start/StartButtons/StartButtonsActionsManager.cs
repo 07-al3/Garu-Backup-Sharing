@@ -7,6 +7,11 @@ public class StartButtonsActionsManager : MonoBehaviour
     [SerializeField] private GameObject creditsButton;
     [SerializeField] private GameObject main;
 
+    public void continueGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     public void newGame()
     {
         PlayerPrefs.SetInt("livello1", 0);

@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 6391107736171145508}
   - component: {fileID: 4379701981859114577}
   m_Layer: 5
-  m_Name: Resume
+  m_Name: Respawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,7 @@ RectTransform:
   m_GameObject: {fileID: 5822662875980612997}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3241360153629410034}
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5158340396680875987, guid: c3c8ba583b78b5b43b9e43078598fe2e, type: 3}
+  m_Sprite: {fileID: -5080457750523267529, guid: 9af1839f53f80834a9b0622b991c9997, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -251,8 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70650b51df584bb40a48a64629df23c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: -5158340396680875987, guid: c3c8ba583b78b5b43b9e43078598fe2e, type: 3}
-  pointerOverImage: {fileID: -3206315949441405346, guid: c3c8ba583b78b5b43b9e43078598fe2e, type: 3}
+  defaultImage: {fileID: -5080457750523267529, guid: 9af1839f53f80834a9b0622b991c9997, type: 3}
+  pointerOverImage: {fileID: -4240861745490722790, guid: 9af1839f53f80834a9b0622b991c9997, type: 3}
 --- !u!114 &6391107736171145508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  startingPosition: {fileID: 0}
   deadCanvas: {fileID: 4911472108882968217}
   playerHealth: {fileID: 0}
   playerShield: {fileID: 0}

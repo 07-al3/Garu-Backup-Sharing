@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PollutedMobAttack : MonoBehaviour
+public class MobRangeAttack : MonoBehaviour
 {
     [SerializeField] private float attackCoolDown;
     [SerializeField] private GameObject player;
