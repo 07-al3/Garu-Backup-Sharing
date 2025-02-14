@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6955345605400446880}
   - component: {fileID: 1657071578372600808}
   - component: {fileID: 9101975039150372031}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CarnivourePlant
   m_TagString: enemy
   m_Icon: {fileID: 0}
