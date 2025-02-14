@@ -27,6 +27,5 @@ public class WaterRubbish : MonoBehaviour
     private void utility(bool flag)
     {
         sprite.sortingOrder = flag ? 3 : 5;
-        pos.Translate();
     }
 }
