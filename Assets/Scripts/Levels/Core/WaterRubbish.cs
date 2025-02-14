@@ -15,10 +15,10 @@ public class WaterRubbish : MonoBehaviour
 
     private IEnumerator alternate()
     {
-        yield return new WaitForSeconds(Random.Range(1, 20));
+        yield return new WaitForSeconds(random());
         utility(true);
 
-        yield return new WaitForSeconds(Random.Range(1, 20));
+        yield return new WaitForSeconds(random());
         utility(false);
 
         StartCoroutine(alternate());
@@ -27,5 +27,10 @@ public class WaterRubbish : MonoBehaviour
     private void utility(bool flag)
     {
         sprite.sortingOrder = flag ? 3 : 5;
+    }
+
+    private int random()
+    {
+        return Random.Range(1, 10);
     }
 }
