@@ -3,36 +3,22 @@ using UnityEngine.SceneManagement;
 
 public class HubLevelLoader : MonoBehaviour
 {
-    private void loadLevel(int index)
+    [SerializeField] private GameObject[] levelDescriptions;
+
+    public void loadLevel(int index)
     {
         SceneManager.LoadScene(index);
     }
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        switch(coll.tag)
+        foreach (GameObject g in levelDescriptions)
         {
-            case "livello1":
+            if(coll.tag.Equals(g.tag))
             {
-                loadLevel(2);
-                break;
+                g.SetActive(true);
+                return;
             }
-            case "livello2":
-            {
-                loadLevel(3);
-                break;
-            }
-            /*
-            case "livello3":
-            {
-                loadLevel(5);
-                break;
-            }
-            case "livello4":
-            {
-                loadLevel(6);
-                break;
-            }*/
         }
     }
 }

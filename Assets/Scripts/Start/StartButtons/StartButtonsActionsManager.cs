@@ -14,10 +14,10 @@ public class StartButtonsActionsManager : MonoBehaviour
 
     public void newGame()
     {
-        PlayerPrefs.SetInt("livello1", 0);
-        PlayerPrefs.SetInt("livello2", 0);
-        PlayerPrefs.SetInt("livello3", 0);
-        PlayerPrefs.SetInt("livello4", 0);
+        PlayerPrefs.SetInt("EarthLev", 0);
+        PlayerPrefs.SetInt("WaterLev", 0);
+        PlayerPrefs.SetInt("FireLev", 0);
+        PlayerPrefs.SetInt("WindLev", 0);
         
         PlayerPrefs.Save();
 

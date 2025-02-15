@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - livello1
-  - livello2
-  - livello3
-  - livello4
+  - EarthLev
+  - WaterLevl
+  - WindLev
+  - FireLev
   - enemy
   - CheckPoint
   - Health
