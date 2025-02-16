@@ -23408,7 +23408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5136269658626593503, guid: 6e302b38295326c488d542191b8b9d4e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9157307187011146103, guid: 6e302b38295326c488d542191b8b9d4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -81396,7 +81396,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.40338516, y: -0.010756493}
+  m_Offset: {x: 31.46, y: -0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -81636,7 +81636,7 @@ GameObject:
   - component: {fileID: 5205588630256238299}
   m_Layer: 0
   m_Name: Finale
-  m_TagString: livello2
+  m_TagString: WaterLevl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
