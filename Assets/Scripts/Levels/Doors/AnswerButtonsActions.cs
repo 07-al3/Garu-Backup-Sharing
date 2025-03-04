@@ -3,8 +3,7 @@ using UnityEngine;
 public class AnswerButtonsActions : MonoBehaviour
 {
     [Header("Sprite And Lever")]
-    [SerializeField] private GameObject doorOpen1;
-    [SerializeField] private GameObject doorOpen2;
+    [SerializeField] private GameObject doorOpen;
     [SerializeField] private GameObject lever;
 
     [Header("Player and Positions")]
@@ -32,10 +31,9 @@ public class AnswerButtonsActions : MonoBehaviour
         player.GetComponent<BehavioursSetter>().setActive(true);
 
         door.SetActive(false);;
-        door.GetComponent<CapsuleCollider2D>().enabled = false;
+        door.GetComponent<BoxCollider2D>().enabled = false;
 
-        doorOpen1.SetActive(true);
-        doorOpen2.SetActive(true);
+        doorOpen.SetActive(true);
 
         lever.SetActive(false);
     }
