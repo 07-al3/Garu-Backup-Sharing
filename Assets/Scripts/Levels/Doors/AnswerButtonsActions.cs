@@ -22,6 +22,8 @@ public class AnswerButtonsActions : MonoBehaviour
         player.GetComponent<BehavioursSetter>().setActive(true);
 
         player.transform.position = healthRef.lastCheckpoint != null ? new Vector2(healthRef.lastCheckpoint.position.x, healthRef.lastCheckpoint.position.y) : new Vector2(startPosition.position.x, startPosition.position.y);
+    
+        player.GetComponent<PlayerAttack>().enabled = false;
     }
 
     public void correct()
@@ -36,5 +38,7 @@ public class AnswerButtonsActions : MonoBehaviour
         doorOpen.SetActive(true);
 
         lever.SetActive(false);
+
+        player.GetComponent<PlayerAttack>().enabled = false;
     }
 }
