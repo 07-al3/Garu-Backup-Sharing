@@ -6,7 +6,10 @@ public class FakeFinale : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        portal.SetActive(true);
-        gameObject.SetActive(false);
+        if(collision.tag.Equals("Player"))
+        {
+            portal.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 }
