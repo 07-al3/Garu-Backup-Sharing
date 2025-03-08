@@ -15,7 +15,7 @@ public class StartButtonsActionsManager : MonoBehaviour
     public void newGame()
     {
         PlayerPrefs.SetInt("EarthLev", 0);
-        PlayerPrefs.SetInt("WaterLev", 0);
+        PlayerPrefs.SetInt("WaterLevl", 0);
         PlayerPrefs.SetInt("FireLev", 0);
         PlayerPrefs.SetInt("WindLev", 0);
         

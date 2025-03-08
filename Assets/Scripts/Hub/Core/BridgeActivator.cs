@@ -5,17 +5,17 @@ public class BridgeActivator : MonoBehaviour
     [SerializeField] private BoxCollider2D lakeCollider;
     [SerializeField] private GameObject[] OtherStatueObj;
 
-    private bool flag;
+    private int conta;
 
     private void Awake()
     {
-        flag = true;
+        conta = 0;
 
         foreach(GameObject g in OtherStatueObj)
-            if(!g.activeInHierarchy)
-                flag = false;
+            if(g.activeInHierarchy)
+                conta++;
 
-        lakeCollider.enabled = flag;
-        gameObject.SetActive(flag);
+        lakeCollider.enabled = conta != 3;
+        gameObject.SetActive(conta == 3);
     }
 }
