@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8e0fdc0f817be4468f513945487bab5
+guid: 10b7962e85ac53c4d944fd3ac649658c
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638767881474861534
+  platformSettingsDirtyTick: 638767890066425618
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -122,7 +122,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: level_BOSS 1
+  - name: level_BOSS 2
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -133,8 +133,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 2000
-      height: 300
-    spriteID: 5032674ba20cc034e940f9399489fac6
+      height: 2100
+    spriteID: fce3323bcc3f4114faf0ae21f33e0acd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,7 +144,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: level_BOSS 1_0
+  - name: level_BOSS 2_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -152,11 +152,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 3
-      y: 4
-      width: 501
-      height: 300
-    spriteID: 0b47637cf4381ef42a036085fc0771c8
+      x: 4
+      y: 1805
+      width: 2000
+      height: 299
+    spriteID: e43bf7582f3e0b94c892d49693f9ad17
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -165,7 +165,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: level_BOSS 1_1
+  - name: level_BOSS 2_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -173,11 +173,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 504
-      y: 4
+      x: 4
+      y: 1204
       width: 500
-      height: 300
-    spriteID: 627299b0b048dea4786022eb5fcd776a
+      height: 181
+    spriteID: 303c8fd4ff35522478cf903936b6a190
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -186,7 +186,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: level_BOSS 1_2
+  - name: level_BOSS 2_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -194,11 +194,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 1004
-      y: 4
-      width: 502
-      height: 300
-    spriteID: 84fee3ea68988ca498e4eb4729349427
+      x: 4
+      y: 904
+      width: 2001
+      height: 57
+    spriteID: 1c73889e456159b40bda7c1be6f05f21
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -207,7 +207,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: level_BOSS 1_3
+  - name: level_BOSS 2_3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -215,11 +215,137 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 1506
+      x: 197
+      y: 604
+      width: 153
+      height: 87
+    spriteID: 8d33492611f699b409ec1bd06fbdfb36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: level_BOSS 2_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 199
+      y: 367
+      width: 154
+      height: 29
+    spriteID: 39e074e4cc6606a478d3a3efd693fd82
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: level_BOSS 2_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 703
+      y: 363
+      width: 147
+      height: 37
+    spriteID: 1090fddaed27e9647b54de9b8d29df0a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: level_BOSS 2_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1201
+      y: 364
+      width: 151
+      height: 40
+    spriteID: eb608b96820e00240b8b11c1d0037790
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: level_BOSS 2_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1704
+      y: 367
+      width: 146
+      height: 36
+    spriteID: 4f68a7bd6a365014d876e1c414546f4b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: level_BOSS 2_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 198
       y: 4
-      width: 498
-      height: 300
-    spriteID: 840e3bf0c07d32848a199f847fad6bd0
+      width: 157
+      height: 86
+    spriteID: 0729fdc3f94c83e4b8e9d15777d4ad50
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: level_BOSS 2_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1503
+      width: 611
+      height: 301
+    spriteID: 576611507fa0e864f8244b370554c789
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -230,21 +356,21 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: -1840145935
-    name: level_BOSS 1
+    guid: 1264654094
+    name: level_BOSS 2
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: level_BOSS 1
+    - name: level_BOSS 2
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 2000
-        height: 300
-      spriteId: 5032674ba20cc034e940f9399489fac6
+        height: 2100
+      spriteId: fce3323bcc3f4114faf0ae21f33e0acd
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -299,4 +425,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 2000, y: 300}
+  canvasSize: {x: 2000, y: 2100}

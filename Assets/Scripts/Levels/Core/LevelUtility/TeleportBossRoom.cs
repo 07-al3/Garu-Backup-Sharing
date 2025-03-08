@@ -9,8 +9,11 @@ public class TeleportBossRoom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        bossRoom.SetActive(true);
-        player.transform.position = InitialBossRoomPosition.position;
-        firstLevelPart.SetActive(false);
+        if(collision.tag.Equals("Player"))
+        {
+            bossRoom.SetActive(true);
+            player.transform.position = InitialBossRoomPosition.position;
+            firstLevelPart.SetActive(false);
+        }
     }
 }

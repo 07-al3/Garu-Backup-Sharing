@@ -9,7 +9,7 @@ public class QuestionActivator : MonoBehaviour
         if(other.tag.Equals("Player"))
         {
             questionCanvas.SetActive(true);
-            Time.timeScale = 0.5f;
+            other.GetComponent<PlayerAttack>().enabled = false;
         }
     }
 }
