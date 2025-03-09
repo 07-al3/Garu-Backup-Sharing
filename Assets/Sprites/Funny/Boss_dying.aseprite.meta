@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c439b5017b8835b40afe9c6c210194d8
+guid: 26d1a72a8cf8c2b41b1bd534667079e4
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -122,9 +122,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Boss_attack_area
+  - name: Boss_dying
     originalName: 
-    pivot: {x: 0.49074075, y: 0}
+    pivot: {x: 0.5456178, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -132,9 +132,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 7452
-      height: 262
-    spriteID: 587b2b48f7a37d6428bac56e0c89c323
+      width: 1392
+      height: 162
+    spriteID: 778d91675746ca24f91f585014c99326
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,25 +142,25 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -168, y: 4}
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1954796704
-    name: Boss_attack_area
+    guid: -1318074401
+    name: Boss_dying
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Boss_attack_area
+    - name: Boss_dying
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 7658
-        height: 262
-      spriteId: 587b2b48f7a37d6428bac56e0c89c323
+        width: 1519
+        height: 162
+      spriteId: 778d91675746ca24f91f585014c99326
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -179,4 +179,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 7658, y: 262}
+  canvasSize: {x: 1519, y: 162}
