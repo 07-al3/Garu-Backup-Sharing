@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1b99f65b324fc8f48a7c46419b8c09ff
+guid: 3498b7c726b3b7642887d5fca00b4b40
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638770492743937679
+  platformSettingsDirtyTick: 638771153631824460
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -122,9 +122,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: boss_reload
+  - name: boss_reload2
     originalName: 
-    pivot: {x: 0.5067633, y: 0}
+    pivot: {x: 0.4993474, y: -0.27272728}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -132,9 +132,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 2070
-      height: 251
-    spriteID: 3fdec60c8ae931248a6b3bfd64e04df0
+      width: 3831
+      height: 220
+    spriteID: ab4f343cc7ecd8e40b5f6b6f5c36191b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,9 +142,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -15, y: 4}
+    uvTransform: {x: -83, y: -56}
   spriteSheetImportData:
-  - name: boss_reload_0
+  - name: boss_reload2_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -153,31 +153,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 5
-      width: 248
-      height: 164
-    spriteID: 7bf7ab52dba13f04eb78b3ae92cd0440
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: boss_reload_1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 274
-      y: 5
+      y: 4
       width: 241
-      height: 170
-    spriteID: e156ad8cbf97aa7418513387e997b73a
+      height: 163
+    spriteID: 1bc15583e82456848bd32883a55f9081
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -186,7 +165,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: boss_reload_2
+  - name: boss_reload2_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -194,11 +173,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 538
-      y: 5
-      width: 246
-      height: 176
-    spriteID: 57477fbd10a8cb24d8fb9cdd1cf7ef3c
+      x: 404
+      y: 4
+      width: 241
+      height: 163
+    spriteID: fd2d62ba4a7ba5743a05f1c32cc2c5ee
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -207,7 +186,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: boss_reload_3
+  - name: boss_reload2_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -215,11 +194,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 803
-      y: 5
-      width: 232
-      height: 176
-    spriteID: 52d3655a658dda74a92576584eff324f
+      x: 802
+      y: 4
+      width: 242
+      height: 163
+    spriteID: 1e91f2da4f8eae7499a66cc56f660574
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -228,7 +207,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: boss_reload_4
+  - name: boss_reload2_3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -236,11 +215,74 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 1070
-      y: 5
-      width: 245
+      x: 1199
+      y: 4
+      width: 244
+      height: 163
+    spriteID: 640ef5a21eb5cd3469334b455596408e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: boss_reload2_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1590
+      y: 4
+      width: 256
+      height: 169
+    spriteID: c63837b80a716ec49a73302fbde8767b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: boss_reload2_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1992
+      y: 4
+      width: 256
+      height: 173
+    spriteID: 6bcef68f9acac4d4fa18e71fa37fc6cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: boss_reload2_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2392
+      y: 4
+      width: 248
       height: 177
-    spriteID: 2942d5d2256d76943b5c86eb5df4d66a
+    spriteID: e76813bae7307a3478bed697019a5807
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -249,7 +291,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: boss_reload_5
+  - name: boss_reload2_7
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -257,11 +299,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 1335
-      y: 5
-      width: 206
-      height: 182
-    spriteID: d52431a0f6c59b84cb47faea5aa1036c
+      x: 2793
+      y: 4
+      width: 239
+      height: 177
+    spriteID: 078e44adb187ee64ab67c2db8b614929
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -270,19 +312,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: boss_reload_6
+  - name: boss_reload2_8
     originalName: 
-    pivot: {x: 0.5, y: 0.35}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 1587
+      x: 3193
       y: 4
-      width: 220
-      height: 216
-    spriteID: fc1c9a4faff8e5d4e8231f0a0e355d95
+      width: 239
+      height: 186
+    spriteID: 15129c9a662a2c740a40689d32ddba16
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -291,19 +333,19 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: boss_reload_7
+  - name: boss_reload2_9
     originalName: 
-    pivot: {x: 0.63, y: 0.32}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 1860
+      x: 3589
       y: 4
-      width: 214
-      height: 251
-    spriteID: 4aa8a892399e5644293438f2701bcd75
+      width: 246
+      height: 220
+    spriteID: 62b4443405ce1524497e56c4b56d248f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -314,21 +356,21 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: 792188423
-    name: boss_reload
+    guid: 1133324661
+    name: boss_reload2
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: boss_reload
+    - name: boss_reload2
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 2136
-        height: 251
-      spriteId: 3fdec60c8ae931248a6b3bfd64e04df0
+        width: 4000
+        height: 300
+      spriteId: ab4f343cc7ecd8e40b5f6b6f5c36191b
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -383,4 +425,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 2136, y: 251}
+  canvasSize: {x: 4000, y: 300}
