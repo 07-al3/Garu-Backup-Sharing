@@ -68,20 +68,15 @@ public class BossBehaviour : MonoBehaviour
 
     private void OnDisable()
     {
+        bossHealthBar.GetComponent<Image>().fillAmount = 0;
         trophy.SetActive(true);
-        StartCoroutine(waitAndFinaleRoom());
-    }
-
-    private IEnumerator waitAndFinaleRoom()
-    {
-        yield return new WaitForSeconds(2);
         player.transform.position = new Vector2(finalePosition.position.x, finalePosition.position.y);
     }
 
     private void attack1()
     {
-        attack1Collider[player.transform.position.x > transform.position.x ? 0 : 1].enabled = true;
-        StartCoroutine(waitAndDisable(attack1Collider[player.transform.position.x > transform.position.x ? 0 : 1]));
+        attack1Collider[transform.localScale.x == Mathf.Abs(transform.localScale.x) ? 1 : 0].enabled = true;
+        StartCoroutine(waitAndDisable(attack1Collider[transform.localScale.x == Mathf.Abs(transform.localScale.x) ? 1 : 0]));
     }
 
     private void attack2()

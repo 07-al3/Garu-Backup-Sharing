@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HubButtonsActionsManager : MonoBehaviour
 {
@@ -26,5 +27,10 @@ public class HubButtonsActionsManager : MonoBehaviour
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
+    }
+
+    public void endGame()
+    {
+        SceneManager.LoadScene(0);
     }
 }
