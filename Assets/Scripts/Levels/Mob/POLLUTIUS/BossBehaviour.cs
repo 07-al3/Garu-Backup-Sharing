@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class BossBehaviour : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class BossBehaviour : MonoBehaviour
     [SerializeField] private BoxCollider2D[] attack1Collider;
     [SerializeField] private BoxCollider2D attack2Collider;
     [SerializeField] private Transform finalePosition;
+    [SerializeField] private float health;
+
 
     private Animator anim;
     private bool firstTime;
@@ -57,7 +60,12 @@ public class BossBehaviour : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Projectile")
+        {
             bossHealthBar.GetComponent<Image>().fillAmount -= 0.033f;
+            health -= (float)collision.GetComponent<Variables>().declarations.Get("DamageValue");
+            if(health < 0.1f)
+                anim.SetTrigger("Die");
+        }
     }
 
     private IEnumerator waitAndDisable(BoxCollider2D c)
@@ -83,5 +91,10 @@ public class BossBehaviour : MonoBehaviour
     {
         attack2Collider.enabled = true;
         StartCoroutine(waitAndDisable(attack2Collider));
+    }
+
+    private void disableObject()
+    {
+        gameObject.SetActive(false);
     }
 }
