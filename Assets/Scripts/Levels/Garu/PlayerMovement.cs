@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -35,8 +34,6 @@ public class PlayerMovement : MonoBehaviour
     {
         setIsGrounded();
         setOnWall();
-
-        checkForKeys();
 
         if(onWall && body.linearVelocity.y != 0)
         {
@@ -99,32 +96,6 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit2D wallCheck = Physics2D.BoxCast(box.bounds.center, box.bounds.size, 0, new Vector2(transform.localScale.x, 0), wallCheckOffset, wallLayer);
         onWall = wallCheck.collider != null ? true : false;
-    }
-
-    private void checkForKeys()
-    {
-        if(Input.GetKeyDown(KeyCode.Q))
-            Time.timeScale = 0.25f; 
-        if(Input.GetKeyDown(KeyCode.E))
-            Time.timeScale = 1; 
-        if(Input.GetKeyDown(KeyCode.R))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-        if(Input.GetKeyDown(KeyCode.T)) 
-        {
-            if(onWall)
-            {
-                resetVelocity();
-                body.AddForce(new Vector2(50 * -Mathf.Sign(transform.localScale.x), 25 * transform.localScale.y), ForceMode2D.Force); 
-            }
-            animator.SetTrigger("Hurt");
-        }
-        if(Input.GetKeyDown(KeyCode.M))
-        {
-            resetVelocity();
-            animator.SetTrigger("Die");
-            
-        }
     }
 
     private void jump(float x, float y)
