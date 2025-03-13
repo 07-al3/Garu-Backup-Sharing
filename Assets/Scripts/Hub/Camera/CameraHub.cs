@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraHub : MonoBehaviour
 {
-    [SerializeField] private Transform playerPosition;
+    public Transform playerPosition;
     [SerializeField] private float offsetZ;
 
     private void Update()
