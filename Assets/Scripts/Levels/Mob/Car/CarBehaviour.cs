@@ -4,17 +4,17 @@ using System.Collections;
 public class CarBehaviour : MonoBehaviour
 {
     [SerializeField] private Sprite attackSprite;
-    private BoxCollider2D coll;
-    private int random;
+    [SerializeField] private GameObject child;
+
     private Sprite oldSprite;
+    private int random;
     private float time;
     private Vector2 oldDim;
 
     private void Awake()
     {
-        oldSprite =  GetComponent<SpriteRenderer>().sprite;   
-        coll = GetComponentInChildren<BoxCollider2D>();     
-        oldDim = coll.size;
+        oldSprite =  GetComponent<SpriteRenderer>().sprite;        
+        oldDim = child.GetComponentInChildren<BoxCollider2D>().size;
         random = Random.Range(5, 11);
         StartCoroutine(waitAndAttack());
     }
@@ -22,7 +22,7 @@ public class CarBehaviour : MonoBehaviour
     private void Update()
     {
         time += Time.deltaTime;
-        if(time < 5)
+        if(time > (random - 3))
             GetComponent<SpriteRenderer>().sprite = attackSprite;
         else
             GetComponent<SpriteRenderer>().sprite = oldSprite;
@@ -33,17 +33,20 @@ public class CarBehaviour : MonoBehaviour
         yield return new WaitForSeconds(random);
         time = 0;
 
-        GetComponentInChildren<Animator>().SetTrigger("Activate");
-        coll.size = new Vector2(0.6f, 0.25f);
-        StartCoroutine(waitAndReduce());
+        child.GetComponentInChildren<Animator>().SetTrigger("Activate");
         yield return new WaitForSeconds(1);
+
+        child.GetComponentInChildren<BoxCollider2D>().size = new Vector2(0.6f, 0.25f);
+        StartCoroutine(waitAndReduce());
+
+        yield return new WaitForSeconds(2);
 
         StartCoroutine(waitAndAttack());
     }
 
     private IEnumerator waitAndReduce()
     {
-        yield return new WaitForSeconds(2);
-        coll.size = oldDim;
+        yield return new WaitForSeconds(1.5f);
+        child.GetComponentInChildren<BoxCollider2D>().size = oldDim;
     }
 }
