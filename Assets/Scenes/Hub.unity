@@ -5148,10 +5148,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Dear Garu, you've come to your final mission: this time, you'll also need
-    knowledge about the only thing humanity did trying to fight Pollutius: the 2030
-    Agenda, in combination with your power and your ability. \nBe prepared and destroy
-    Pollutius once for all.\n\t\t\t\t\t\t\t\t\t-Gaia"
+  m_Text: "my champion, you're going to face a difficult mission: you'll have to
+    sneak through lots of enemies traps in order to free the surface of earth, contaminated
+    by toxic gases and flagellated by climate changes, tornados and pollution. Be
+    aware that you'll not be able to fight enemies here, but only to avoid them.
+    be carefull...\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t-Gaia"
 --- !u!222 &1082610632
 CanvasRenderer:
   m_ObjectHideFlags: 0
