@@ -763,7 +763,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'FINAL LEVEL: FIRE LEVEL'
+  m_Text: wind level
 --- !u!222 &109661683
 CanvasRenderer:
   m_ObjectHideFlags: 0
