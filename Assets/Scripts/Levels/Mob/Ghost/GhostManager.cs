@@ -15,7 +15,7 @@ public class GhostManager : MonoBehaviour
     private void Update()
     {
         time += Time.deltaTime;
-        if(time > 3)
+        if(time > 5)
         {
             time = 0;
             activate();
@@ -27,7 +27,7 @@ public class GhostManager : MonoBehaviour
         for(int i = 0; i < random.Length; i++)
             random[i] = Random.Range(0, ghosts.Length);
 
-        for(int i = 0; i < ghosts.Length; i++)
+        for(int i = 0; i < random.Length; i++)
             ghosts[random[i]].SetActive(true); 
     }
 }
