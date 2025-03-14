@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7fcb01e46e14ca948a1886506f053f31
+guid: 8c0ed1a3a7e29da4d9947427f369a8f7
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638775639104319667
+  platformSettingsDirtyTick: 638775654530102814
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -122,9 +122,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: tornado
+  - name: ghost_attack
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.50132626, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -132,9 +132,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 146
-      height: 43
-    spriteID: bcf403ed97f4f6947a590fb8679a201c
+      width: 377
+      height: 36
+    spriteID: fe27ca7adc28909458525ac4bfbb82b0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,9 +142,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 2, y: 4}
+    uvTransform: {x: -17, y: 4}
   spriteSheetImportData:
-  - name: tornado_0
+  - name: ghost_attack_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -152,11 +152,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 44
-      height: 43
-    spriteID: f1b64d7119953a3458e1fbc5336fa393
+      x: 3
+      y: 7
+      width: 40
+      height: 32
+    spriteID: e6b2df9ea15a6004eb0992c65e4745b8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -165,7 +165,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: tornado_1
+  - name: ghost_attack_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -173,11 +173,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 52
-      y: 4
+      x: 59
+      y: 8
       width: 44
-      height: 43
-    spriteID: a5f1ba5ed8a51104383f94caf582ff1a
+      height: 31
+    spriteID: 577845f4c176f8e47aa2a56367dd8539
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -186,7 +186,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: tornado_2
+  - name: ghost_attack_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -194,11 +194,95 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 106
+      x: 113
+      y: 6
+      width: 50
+      height: 35
+    spriteID: 6e9b0e812e9ecdb49854c1ba15e6b1e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: ghost_attack_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 168
+      y: 6
+      width: 46
+      height: 32
+    spriteID: 1f3c3a0e3834f6548814d1d7d07da77f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: ghost_attack_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 5
+      width: 41
+      height: 31
+    spriteID: 9ee175188c3808742a6ae36907dfbadf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: ghost_attack_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 284
+      y: 3
+      width: 36
+      height: 30
+    spriteID: c42a0e7ea00b0e4449a45fe4e94c9a16
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: ghost_attack_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 343
       y: 4
-      width: 44
-      height: 43
-    spriteID: 05b55f8952bd7724da462520eb87fcf9
+      width: 36
+      height: 27
+    spriteID: b00ec302623f36b408cac6db89c7ce98
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -209,21 +293,21 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: -1823368503
-    name: tornado
+    guid: -2079781758
+    name: ghost_attack
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: tornado
+    - name: ghost_attack
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 150
-        height: 50
-      spriteId: bcf403ed97f4f6947a590fb8679a201c
+        width: 420
+        height: 36
+      spriteId: fe27ca7adc28909458525ac4bfbb82b0
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -242,7 +326,7 @@ ScriptedImporter:
   - name: DefaultTexturePlatform
     overridden: 0
     ignorePlatformSupport: 0
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -278,4 +362,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 150, y: 50}
+  canvasSize: {x: 420, y: 36}

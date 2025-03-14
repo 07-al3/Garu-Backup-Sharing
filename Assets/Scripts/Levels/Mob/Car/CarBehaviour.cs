@@ -22,7 +22,7 @@ public class CarBehaviour : MonoBehaviour
     private void Update()
     {
         time += Time.deltaTime;
-        if(time > (random - 3))
+        if(time > (random - 1.5))
             GetComponent<SpriteRenderer>().sprite = attackSprite;
         else
             GetComponent<SpriteRenderer>().sprite = oldSprite;
@@ -30,14 +30,17 @@ public class CarBehaviour : MonoBehaviour
 
     private IEnumerator waitAndAttack()
     {
+        time = 0;
         yield return new WaitForSeconds(random);
         time = 0;
 
         child.GetComponentInChildren<Animator>().SetTrigger("Activate");
         yield return new WaitForSeconds(1);
+        time = 0;
 
         child.GetComponentInChildren<BoxCollider2D>().size = new Vector2(0.6f, 0.25f);
         StartCoroutine(waitAndReduce());
+        time = 0;
 
         yield return new WaitForSeconds(2);
 
