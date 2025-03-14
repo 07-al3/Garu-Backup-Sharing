@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RespawnManager : MonoBehaviour
+public class WindRespawn : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private Transform startingPosition;
@@ -9,13 +9,11 @@ public class RespawnManager : MonoBehaviour
     [SerializeField] private Image playerHealth;
     [SerializeField] private Image playerShield;
 
-    private Rigidbody2D playerBody;
     private PlayerHealth playerHealthScript;
     private BehavioursSetter playerBehaviours;
 
     private void Awake()
     {
-        playerBody = player.GetComponent<Rigidbody2D>();
         playerHealthScript = player.GetComponent<PlayerHealth>();
         playerBehaviours = player.GetComponent<BehavioursSetter>();
     }
@@ -23,9 +21,6 @@ public class RespawnManager : MonoBehaviour
     public void OnClick()
     {
         playerHealthScript.dead = false;
-            
-        playerBody.gravityScale = 1;
-
         playerHealth.fillAmount = 1;
         playerShield.fillAmount = 0;
 
