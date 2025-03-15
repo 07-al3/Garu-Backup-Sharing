@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class WinCheck : MonoBehaviour
 {
@@ -13,6 +14,13 @@ public class WinCheck : MonoBehaviour
         foreach(GameObject obj in statueObjects)
             if(obj.activeInHierarchy)
                 conta++;
-        winCanvas.SetActive(conta == 4);
+        if(conta == 4)
+            StartCoroutine(waitAndGo());       
+    }
+
+    private IEnumerator waitAndGo()
+    {
+        yield return new WaitForSeconds(4);
+        winCanvas.SetActive(true);
     }
 }

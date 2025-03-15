@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Image currentShield;
     [SerializeField] private GameObject deadCanvas;
 
+    public int nMorti = 0;
     public bool dead;
     private Animator anim;
     private Rigidbody2D body;
@@ -92,5 +93,7 @@ public class PlayerHealth : MonoBehaviour
         currentShield.fillAmount = 0;
 
         deadCanvas.SetActive(true);
+
+        nMorti++;
     }
 }

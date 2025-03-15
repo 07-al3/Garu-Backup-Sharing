@@ -14,7 +14,6 @@ public class BossBehaviour : MonoBehaviour
     [SerializeField] private Transform finalePosition;
     [SerializeField] private float health;
 
-
     private Animator anim;
     private bool firstTime;
 
@@ -30,6 +29,16 @@ public class BossBehaviour : MonoBehaviour
 
         StartCoroutine(waitAndActivate());
         StartCoroutine(waitAndStartAttacking());
+    }
+
+    private void Update()
+    {
+        if(player.GetComponent<PlayerHealth>().nMorti == 5)
+        {
+            health = 30;
+            player.GetComponent<PlayerHealth>().nMorti = 0;
+            bossHealthBar.GetComponent<Image>().fillAmount = 1;
+        }
     }
 
     private IEnumerator waitAndActivate()

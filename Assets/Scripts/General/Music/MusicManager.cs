@@ -4,8 +4,8 @@ using System.Collections;
 public class MusicManager : MonoBehaviour
 {
     [SerializeField] private AudioClip[] tracksList;
-    private int index = 0; 
     private AudioSource audioSource;
+    private int random;
 
     private void Awake()
     {
@@ -15,9 +15,9 @@ public class MusicManager : MonoBehaviour
 
     private void PlayNextTrack()
     {
-        index = index < tracksList.Length ? index : 0;
+        random = Random.Range(0, tracksList.Length);
 
-        audioSource.clip = tracksList[index];
+        audioSource.clip = tracksList[random];
         audioSource.Play();
         
         StartCoroutine(WaitForTrackToEnd());
@@ -26,7 +26,6 @@ public class MusicManager : MonoBehaviour
     private IEnumerator WaitForTrackToEnd()
     {
         yield return new WaitWhile(() => audioSource.isPlaying);
-        index++;
         PlayNextTrack();
     }
 }
