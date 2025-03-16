@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Image currentHealth;
     [SerializeField] private Image currentShield;
     [SerializeField] private GameObject deadCanvas;
+    [SerializeField] private GameObject deathCountsCanvas;
 
     public int nMorti = 0;
     public bool dead;
@@ -95,5 +96,6 @@ public class PlayerHealth : MonoBehaviour
         deadCanvas.SetActive(true);
 
         nMorti++;
+        deathCountsCanvas.GetComponent<Text>().text = "Number Of Defeats: " + nMorti;
     }
 }
