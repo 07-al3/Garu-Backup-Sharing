@@ -96,6 +96,6 @@ public class PlayerHealth : MonoBehaviour
         deadCanvas.SetActive(true);
 
         nMorti++;
-        deathCountsCanvas.GetComponent<Text>().text = "Number Of Defeats: " + nMorti;
+        deathCountsCanvas.GetComponent<Text>().text = "X " + nMorti;
     }
 }

@@ -36,7 +36,6 @@ public class BossBehaviour : MonoBehaviour
         if(player.GetComponent<PlayerHealth>().nMorti == 5)
         {
             health = 30;
-            player.GetComponent<PlayerHealth>().nMorti = 0;
             bossHealthBar.GetComponent<Image>().fillAmount = 1;
         }
     }
