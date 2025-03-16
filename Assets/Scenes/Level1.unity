@@ -144093,14 +144093,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2786618113926410145, guid: b8ad29e7dceec68439cd7cb0f0ec1668, type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786618113926410145, guid: b8ad29e7dceec68439cd7cb0f0ec1668, type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6084587063628082041, guid: b8ad29e7dceec68439cd7cb0f0ec1668, type: 3}
       propertyPath: m_Name
       value: DeathCount

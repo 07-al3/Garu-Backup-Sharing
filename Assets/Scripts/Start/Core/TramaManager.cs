@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class TramaManager : MonoBehaviour
@@ -14,10 +15,15 @@ public class TramaManager : MonoBehaviour
 
     private IEnumerator routineDef()
     {
-        if(index == 7)
-            gameObject.SetActive(false);
-        texts[index++].SetActive(true);
-        yield return new WaitForSeconds(12);
-        StartCoroutine(routineDef());
+        if(index >= texts.Length)
+            SceneManager.LoadScene(1);
+        else
+        {
+            texts[index].SetActive(true);
+            yield return new WaitForSeconds(17);        
+            texts[index].SetActive(false);
+            index++;
+            StartCoroutine(routineDef());
+        }
     }
 }

@@ -28,8 +28,6 @@ public class StartButtonsActionsManager : MonoBehaviour
         PlayerPrefs.Save();
 
         trama.SetActive(true);
-
-        SceneManager.LoadScene(1);
     }
 
     public void quitGame()
