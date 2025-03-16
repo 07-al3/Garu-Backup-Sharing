@@ -6,9 +6,15 @@ public class StartButtonsActionsManager : MonoBehaviour
     [SerializeField] private GameObject volumeScreen;
     [SerializeField] private GameObject creditsButton;
     [SerializeField] private GameObject main;
+    [SerializeField] private GameObject trama;
 
     public void continueGame()
     {
+        int val = PlayerPrefs.GetInt("EarthLev", 10);
+
+        if(val == 10)
+            newGame();
+
         SceneManager.LoadScene(1);
     }
 
@@ -20,6 +26,8 @@ public class StartButtonsActionsManager : MonoBehaviour
         PlayerPrefs.SetInt("WindLev", 0);
         
         PlayerPrefs.Save();
+
+        trama.SetActive(true);
 
         SceneManager.LoadScene(1);
     }
