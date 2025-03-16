@@ -6,6 +6,7 @@ public class TeleportBossRoom : MonoBehaviour
     [SerializeField] private GameObject bossRoom;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject firstLevelPart;
+    [SerializeField] private GameObject playerRespawn;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,6 +15,7 @@ public class TeleportBossRoom : MonoBehaviour
             bossRoom.SetActive(true);
             player.transform.position = InitialBossRoomPosition.position;
             firstLevelPart.SetActive(false);
+            playerRespawn.GetComponent<RespawnManager>().startingPosition = InitialBossRoomPosition;
         }
     }
 }

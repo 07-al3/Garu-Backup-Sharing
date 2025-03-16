@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class RespawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private Transform startingPosition;
+    public Transform startingPosition;
     [SerializeField] private GameObject deadCanvas;
     [SerializeField] private Image playerHealth;
     [SerializeField] private Image playerShield;
