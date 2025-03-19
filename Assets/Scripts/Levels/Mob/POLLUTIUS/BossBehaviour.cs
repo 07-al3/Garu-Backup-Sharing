@@ -33,7 +33,7 @@ public class BossBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if(player.GetComponent<PlayerHealth>().nMorti == 5)
+        if(player.GetComponent<PlayerHealth>().nMorti == 7)
         {
             health = 30;
             bossHealthBar.GetComponent<Image>().fillAmount = 1;
