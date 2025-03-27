@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
     private Rigidbody2D body;
     private BehavioursSetter behaviourReference;
     private Transform playerPosition;
-    public Transform lastCheckpoint {get; private set;}
+    public Transform lastCheckpoint;
 
     private void Awake()
     {
@@ -39,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
         {
             lastCheckpoint = other.transform;
             other.GetComponent<Animator>().SetTrigger("Activate");
+            other.GetComponent<BoxCollider2D>().enabled = false;
         }
         if(other.tag.Equals("Health"))
         {

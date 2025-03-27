@@ -23,7 +23,7 @@ public class AnswerButtonsActions : MonoBehaviour
 
         player.transform.position = healthRef.lastCheckpoint != null ? new Vector2(healthRef.lastCheckpoint.position.x, healthRef.lastCheckpoint.position.y) : new Vector2(startPosition.position.x, startPosition.position.y);
     
-        player.GetComponent<PlayerAttack>().enabled = false;
+        player.GetComponent<PlayerAttack>().enabled = true;
     }
 
     public void correct()
@@ -39,6 +39,6 @@ public class AnswerButtonsActions : MonoBehaviour
 
         lever.SetActive(false);
 
-        player.GetComponent<PlayerAttack>().enabled = false;
+        player.GetComponent<PlayerAttack>().enabled = true;
     }
 }

@@ -16,6 +16,7 @@ public class TeleportBossRoom : MonoBehaviour
             player.transform.position = InitialBossRoomPosition.position;
             firstLevelPart.SetActive(false);
             playerRespawn.GetComponent<RespawnManager>().startingPosition = InitialBossRoomPosition;
+            player.GetComponent<PlayerHealth>().lastCheckpoint = InitialBossRoomPosition;
         }
     }
 }
