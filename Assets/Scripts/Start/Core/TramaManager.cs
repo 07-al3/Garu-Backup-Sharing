@@ -20,7 +20,7 @@ public class TramaManager : MonoBehaviour
         else
         {
             texts[index].SetActive(true);
-            yield return new WaitForSeconds(17);        
+            yield return new WaitForSeconds(11);        
             texts[index].SetActive(false);
             index++;
             StartCoroutine(routineDef());
